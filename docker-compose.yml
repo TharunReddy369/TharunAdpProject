@@ -1,0 +1,15 @@
+services:
+  frontend:
+    image: <frontendimagename>
+    container-name:
+	- 
+    ports:
+      - "8000:8000"
+    
+  backend:
+    image: <backendndimagename>
+    ports:
+      - "8000:8000"
+    container-name:
+      - 
+    

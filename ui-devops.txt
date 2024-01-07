@@ -1,0 +1,86 @@
+Dockerfile
+-------------------------------------------
+#FROM node:alpine
+FROM docker.repository.esi.adp.com/clientcentral/node:latest
+WORKDIR /app
+COPY package.json .
+COPY . .
+CMD ["npm", "start"]
+
+EXPOSE 3000
+
+
+
+Jenkinsfile
+--------------------------------------------------------
+pipeline {
+  agent any
+
+  stages {
+    stage('Install Packages') {
+      steps {
+        bat 'npm install'
+      }
+    }
+	
+    stage('Run Tests') {
+          steps {
+            echo 'Run Tests'
+            bat 'npm run test'
+          }
+        }
+
+    stage('SonarQube Coverage') {
+          steps {
+            echo 'SonarQube Coverage'
+           
+           // replace the sonar token with your token
+            bat '''sonar-scanner \
+              -Dsonar.host.url=http://CDLVDIDEVMAN499:9000 \
+              -Dsonar.login=7b83054b6ec615206ca18a7af169c491741a5786'''
+              }
+        }
+   
+        stage('Create Build Artifacts') {
+          steps {
+            sh 'npm run build'
+          }
+        }
+    //replace order-ui with your docker image name at all places	
+    stage('Docker Build') {
+            steps {
+			echo 'Docker Build'
+        bat 'docker build -t  docker.repository.esi.adp.com/clientcentral/training:order-ui -f Dockerfile .'
+			//bat label: 'Docker Build', script: '''docker build -t docker.repository.esi.adp.com/clientcentral/training:order-ui -f Dockerfile .'''
+            }
+        }
+    
+    stage('Docker Push'){
+            steps {
+                bat 'docker push docker.repository.esi.adp.com/clientcentral/training:order-ui'
+            }
+        }
+        
+        stage('Docker deploy'){
+            steps {
+               
+                bat 'docker run -itd -p  3000:3000 docker.repository.esi.adp.com/clientcentral/training:order-ui'
+            }
+        }
+    
+   
+
+    }
+    post {
+        always {
+           publishHTML target: [
+            allowMissing         : false,
+            alwaysLinkToLastBuild: false,
+            keepAll             : true,
+            reportDir            : 'coverage/lcov-report/',
+            reportFiles          : 'index.html',
+            reportName           : 'Test Report'
+          ]
+        }
+      }
+    }
