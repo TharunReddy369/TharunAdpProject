@@ -1,0 +1,32 @@
+.navbar ul{
+    display: flex;
+    padding: 10px;
+    margin-bottom: 0px;
+    /* color: white; */
+}
+.navbar ul li{
+    margin:10px 20px;
+
+}
+.navbar ul li a{
+    /* font-weight: bold; */
+    font-size: larger;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+.navbar ul li a:hover{
+
+    color: #96EFFF;
+
+}
+
+.unactive {
+    color: white;
+}
+
+.active{
+    /* color: rgb(27, 26, 26); */
+    color: #96EFFF;
+
+}

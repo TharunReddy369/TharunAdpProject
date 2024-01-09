@@ -1,0 +1,7 @@
+.loginpage{
+    background-image: url("https://online.adp.com/api/brand-service/v1/brands/image?productId=$default$&imageId=ADP_default_background.png");
+    min-height: 100vh;
+    background-size: cover;
+
+
+    }

@@ -1,0 +1,9 @@
+.wrapper{
+    width: 100%;
+    max-height: 25rem;
+    max-width: 80rem;
+
+    overflow-y: auto;
+
+}
+

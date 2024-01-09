@@ -1,0 +1,58 @@
+.box{
+ 
+    width: 12rem;
+   
+    position: absolute;
+    top:62px;
+    right: 10px;
+    color: black;
+    z-index: 100;
+    background-color: white;
+    overflow: hidden;
+
+}
+.profile_top{
+   background-color: #dce8ea;
+   height: 80px;
+   padding: 10px 0px;
+   
+   
+}
+.circle{
+  
+   width: 55px;
+   height: 55px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin:  auto;
+   background-color: rgb(254, 254, 254);
+   color: rgb(196, 11, 11);
+   font-weight: bold;
+
+
+
+}
+
+.profile_middle
+{
+
+  text-align: center;
+  padding: 10px;
+  
+}
+.profile_middle p{
+   font-size: larger;
+   color: rgb(7, 54, 92);
+}
+
+.profile_middle .a{
+   font-size: larger;
+   font-weight: bold;
+ 
+
+   display: block;
+   width: 100%;
+   border-radius: 5px;
+}

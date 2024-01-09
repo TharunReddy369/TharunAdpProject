@@ -1,0 +1,25 @@
+.bg-violet{
+    background-color: #192655;
+}
+
+.navbar ul{
+    display: flex;
+    padding: 10px;
+}
+.navbar ul li{
+    margin:10px 20px;
+}
+.navbar ul li a{
+    font-weight: bold;
+    font-size: larger;
+    text-transform: capitalize;
+
+}
+.navbar ul li a:hover{
+
+    color: rgb(15, 15, 15);
+
+}
+.active{
+    color: rgb(16, 16, 16);
+}

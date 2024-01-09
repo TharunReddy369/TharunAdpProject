@@ -1,0 +1,165 @@
+.table{
+
+    width: 100%;
+
+    box-shadow: 0px 9px 9px rgba(0, 0, 0, 0.137);
+
+   
+  }
+  .table, 
+  .table td, .table th
+  {
+
+    text-align: start;
+   
+  
+    
+    
+}
+.table tbody td{
+    height: 3rem;
+}
+.table tbody{
+
+    overflow:scroll;
+}
+
+
+
+.table td,.table th{
+    padding: 10px;
+  }
+
+.table tbody tr:nth-child(odd){
+
+    background-color: rgba(214, 211, 211, 0.605);
+
+}
+
+.table_wrapper tbody{
+    width: 100%;
+}
+
+
+.home_wrapper{
+    
+    display: flex;
+    
+   flex-direction: row;
+    padding: 0px 5px;
+    /* width: 100%; */
+    justify-content: space-between;
+    margin: 10px;
+ 
+    
+  }
+  .selecting-div{
+
+
+    margin-bottom: 5px;
+    padding:0px 10px;
+    display: flex;
+
+    border-radius:10px;
+
+    height: 5rem;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.288);
+    background-color: rgba(214, 211, 211, 0.484);
+}
+.table_wrapper{
+    width: 100%;
+    max-height: 23rem;
+
+    /* overflow-y: scroll; */
+    overflow-y: auto;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.288);
+    border-radius: 8px
+    
+
+}
+
+
+
+
+.home_container .cards_side{
+  width: 60%;
+  margin: 20px auto;
+
+}
+.info_card{
+  background: linear-gradient(358deg, rgba(178, 0, 255, 0.51) 23%, rgba(0, 4, 255, 0.541) 100%);
+
+  margin: 0px auto;
+
+  color: rgb(22, 22, 71);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.412);
+
+  color: rgb(45,34,205)
+}
+
+
+.table_data{
+  /* width: 80%; */
+  width: 55rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .approved_btn:disabled{
+    color: white;
+    background-color: gray;
+    cursor:not-allowed;
+
+
+  }
+  .home_error_modal{
+    height: 10rem;
+
+  }
+
+  .home_container .cards_side{
+    width: 60%;
+    margin: 0px auto;
+  
+  }
+  .info_card{
+    background: linear-gradient(358deg, #EEF5FF 33%, #7C93C3 100%);
+  
+    margin: 0px auto;
+  
+    color: rgb(22, 22, 71);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.412);
+  
+    color: rgb(45,34,205)
+  }
+  .Roles{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .Roles span{
+    color: rgb(22, 22, 71);
+    display: flex;
+    margin: 4px;
+    padding:0px 7px;
+  
+    background-color: rgb(255, 255, 255);
+    color:rgb(43, 61, 226);
+    border-radius: 8px;
+  
+  
+   
+  }
